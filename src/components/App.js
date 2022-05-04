@@ -1,5 +1,10 @@
 import "../styles/App.scss";
 
+//Componentes
+
+//Servicies
+import getMovieScene from "../services/getMovieScene";
+
 function App() {
   return (
     <div>
