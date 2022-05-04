@@ -11,6 +11,8 @@ import localStorage from "../services/localStorage";
 
 //Componentes
 import Header from "./Header";
+import Filters from "./Filters";
+import MovieSceneList from "./MovieSceneList";
 
 function App() {
   //States
@@ -37,7 +39,10 @@ function App() {
   return (
     <div className="page">
       <Header />
-      <main></main>
+      <main>
+        <Filters />
+        <MovieSceneList moviesList={movieScene} />
+      </main>
     </div>
   );
 }
