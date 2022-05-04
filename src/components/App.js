@@ -37,6 +37,7 @@ function App() {
   return (
     <div className="page">
       <Header />
+      <main></main>
     </div>
   );
 }
