@@ -10,6 +10,7 @@ import getMovieScene from "../services/getMovieScene";
 import localStorage from "../services/localStorage";
 
 //Componentes
+import Header from "./Header";
 
 function App() {
   //States
@@ -34,8 +35,8 @@ function App() {
   //Function
 
   return (
-    <div>
-      <h1>Hola mundo</h1>
+    <div className="page">
+      <Header />
     </div>
   );
 }
