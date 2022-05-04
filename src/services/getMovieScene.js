@@ -13,7 +13,6 @@ const getMovieScene = () => {
           audio: item.audio,
         };
       });
-      console.log(cleanData);
       return cleanData;
     });
 };
