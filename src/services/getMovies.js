@@ -1,4 +1,4 @@
-const getMovieScene = () => {
+const getMovies = () => {
   return fetch(
     "https://owen-wilson-wow-api.herokuapp.com/wows/random?results=50"
   )
@@ -17,4 +17,4 @@ const getMovieScene = () => {
     });
 };
 
-export default getMovieScene;
+export default getMovies;

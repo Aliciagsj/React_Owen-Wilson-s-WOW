@@ -3,11 +3,24 @@ const FilterYear = (props) => {
     props.handleFilterYear(ev.target.value);
   };
 
+  const renderYears = () => {
+    return props.years.map((year, index) => {
+      return (
+        <option key={index} value={year}>
+          {year}
+        </option>
+      );
+    });
+  };
+
   return (
     <>
-      <label htmlFor="">Year</label>
-      <select name="" id="" onChange={handleChange}>
-        <option value="">Seleccione</option>
+      <label className="form__label" htmlFor="year">
+        Year
+      </label>
+      <select name="year" id="" onChange={handleChange}>
+        <option value="">Todos</option>
+        {renderYears()}
       </select>
     </>
   );

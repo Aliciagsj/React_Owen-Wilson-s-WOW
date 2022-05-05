@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 // import { matchPath, useLocation } from 'react-router';
 
 //Servicies
-import getMovieScene from "../services/getMovieScene";
+import getMovies from "../services/getMovies";
 import localStorage from "../services/localStorage";
 
 //Componentes
@@ -17,31 +17,68 @@ import MovieSceneList from "./MovieSceneList";
 function App() {
   //States
 
-  const [movieScene, setMovieScene] = useState(
-    localStorage.get("movieScene", [])
-  );
+  const [movies, setMovies] = useState(localStorage.get("movies", []));
+
+  const [filterMovies, setFilterMovies] = useState("");
+
+  const [filterYear, setFilterYear] = useState("");
 
   //Effect
 
   useEffect(() => {
-    if (movieScene.length === 0) {
-      getMovieScene().then((data) => {
+    if (movies.length === 0) {
+      getMovies().then((data) => {
         // Función que guarda una propiedad y su valor en el local storage
-        localStorage.set("movieScene", data);
+        localStorage.set("movies", data);
         //Función para guardar en el estado los datos del fetch
-        setMovieScene(data);
+        setMovies(data);
       });
     }
   });
 
-  //Function
+  //Filtro Movie
+
+  const handleFilterMovie = (value) => {
+    setFilterMovies(value);
+  };
+
+  const handleFilterYear = (value) => {
+    setFilterYear(value);
+  };
+
+  const moviesFilters = movies
+    .filter((movie) => {
+      return filterMovies === ""
+        ? true
+        : movie.movie.toLowerCase().includes(filterMovies.toLowerCase());
+    })
+    .filter((movie) => {
+      return filterYear === "" ? true : movie.year === parseInt(filterYear);
+    });
+
+  const getYears = () => {
+    const movieYear = movies.map((movie) => movie.year);
+
+    const uniqueYear = movieYear.filter((year, index) => {
+      return movieYear.indexOf(year) === index;
+    });
+    return uniqueYear.sort();
+  };
 
   return (
     <div className="page">
       <Header />
       <main>
-        <Filters />
-        <MovieSceneList moviesList={movieScene} />
+        <Filters
+          handleFilterMovie={handleFilterMovie}
+          handleFilterYear={handleFilterYear}
+          years={getYears()}
+        />
+        <MovieSceneList
+          moviesList={moviesFilters}
+          movie={filterMovies}
+          year={filterYear}
+        />
       </main>
     </div>
   );
