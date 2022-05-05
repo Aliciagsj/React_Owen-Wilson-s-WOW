@@ -2,8 +2,8 @@
 import "../styles/App.scss";
 
 import { useEffect, useState } from "react";
-// import { Routes, Route } from 'react-router-dom';
-// import { matchPath, useLocation } from 'react-router';
+import { Routes, Route } from "react-router-dom";
+import { matchPath, useLocation } from "react-router";
 
 //Servicies
 import getMovies from "../services/getMovies";
@@ -13,6 +13,7 @@ import localStorage from "../services/localStorage";
 import Header from "./Header";
 import Filters from "./Filters";
 import MovieSceneList from "./MovieSceneList";
+import MovieSceneDetail from "./MovieSceneDetail";
 
 function App() {
   //States
@@ -65,20 +66,40 @@ function App() {
     return uniqueYear.sort();
   };
 
+  const { pathname } = useLocation();
+  const dataPath = matchPath("/movie/:movieId", pathname);
+
+  const movieId = dataPath !== null ? dataPath.params.movieId : null;
+  const movieFound = movies.find((item) => item.id === parseInt(movieId));
+
   return (
     <div className="page">
       <Header />
       <main>
-        <Filters
-          handleFilterMovie={handleFilterMovie}
-          handleFilterYear={handleFilterYear}
-          years={getYears()}
-        />
-        <MovieSceneList
-          moviesList={moviesFilters}
-          movie={filterMovies}
-          year={filterYear}
-        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filters
+                  handleFilterMovie={handleFilterMovie}
+                  handleFilterYear={handleFilterYear}
+                  years={getYears()}
+                />
+                <MovieSceneList
+                  moviesList={moviesFilters}
+                  movie={filterMovies}
+                  year={filterYear}
+                />
+              </>
+            }
+          />
+
+          <Route
+            path="/movie/:movieId"
+            element={<MovieSceneDetail movieDetail={movieFound} />}
+          />
+        </Routes>
       </main>
     </div>
   );

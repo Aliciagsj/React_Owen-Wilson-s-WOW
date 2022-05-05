@@ -4,13 +4,15 @@ const getMovies = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.map((item) => {
+      const cleanData = data.map((item, index) => {
         return {
+          id: index,
           movie: item.movie,
           year: item.year,
           full_line: item.full_line,
           poster: item.poster,
           audio: item.audio,
+          director: item.director,
         };
       });
       return cleanData;
