@@ -91,7 +91,6 @@ function App() {
                 <MovieSceneList
                   moviesList={moviesFilters}
                   filterMovies={filterMovies}
-                  year={filterYear}
                 />
               </>
             }
