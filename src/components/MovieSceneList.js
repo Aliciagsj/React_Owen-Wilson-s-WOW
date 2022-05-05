@@ -3,7 +3,7 @@ import MovieSceneItem from "./MovieSceneItem";
 
 const MovieSceneList = (props) => {
   const { moviesList } = props;
-  const { movie } = props;
+  const { filterMovies } = props;
   const { year } = props;
 
   const renderList = moviesList.map((movieItem, index) => {
@@ -14,7 +14,7 @@ const MovieSceneList = (props) => {
 
   return renderList.length === 0 ? (
     <div>
-      WOW!!!! no encuentro la pelicula: {movie} en el año {year}
+      WOW!!!! no encuentro la pelicula: {filterMovies} en el año {year}
     </div>
   ) : (
     <ul className="list">{renderList}</ul>

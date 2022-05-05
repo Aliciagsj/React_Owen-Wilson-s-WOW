@@ -60,10 +60,10 @@ function App() {
   const getYears = () => {
     const movieYear = movies.map((movie) => movie.year);
 
-    const uniqueYear = movieYear.filter((year, index) => {
+    const uniqueYear = movieYear.sort().filter((year, index) => {
       return movieYear.indexOf(year) === index;
     });
-    return uniqueYear.sort();
+    return uniqueYear;
   };
 
   const { pathname } = useLocation();
@@ -85,10 +85,12 @@ function App() {
                   handleFilterMovie={handleFilterMovie}
                   handleFilterYear={handleFilterYear}
                   years={getYears()}
+                  filterMovies={filterMovies}
+                  year={filterYear}
                 />
                 <MovieSceneList
                   moviesList={moviesFilters}
-                  movie={filterMovies}
+                  filterMovies={filterMovies}
                   year={filterYear}
                 />
               </>

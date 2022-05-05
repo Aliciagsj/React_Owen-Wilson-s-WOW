@@ -15,7 +15,21 @@ const getMovies = () => {
           director: item.director,
         };
       });
-      return cleanData;
+
+      const sortData = cleanData.sort(function (a, b) {
+        const nameA = a.movie.toUpperCase();
+        const nameB = b.movie.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        return 0;
+      });
+
+      return sortData;
     });
 };
 

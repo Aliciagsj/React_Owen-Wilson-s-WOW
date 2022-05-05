@@ -8,11 +8,15 @@ const Filters = (props) => {
   };
   return (
     <form className="filter" onSubmit={handleFormSubmit}>
-      <FilterMovie handleFilterMovie={props.handleFilterMovie} />
+      <FilterMovie
+        handleFilterMovie={props.handleFilterMovie}
+        filterMovies={props.filterMovies}
+      />
 
       <FilterYear
         handleFilterYear={props.handleFilterYear}
         years={props.years}
+        year={props.year}
       />
     </form>
   );
