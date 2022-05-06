@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Img404 from "../images/Error404.jpg";
 
 const NotFound = () => (
-  <div>
-    <h1>404 - Not Found!</h1>
-    <Link to="/">Go Home</Link>
+  <div className="">
+    <img src={Img404} alt="Foto error 404" />
+    <Link to="/">Back to Home</Link>
   </div>
 );
 
