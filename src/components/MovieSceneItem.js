@@ -5,8 +5,8 @@ const MovieSceneItem = (props) => {
   const { id, movie, year, full_line, poster } = props.movie;
   return (
     <>
-      <Link to={`/movie/${id}`}>
-        <li key={id} className="card">
+      <li key={id}>
+        <Link className="card" to={`/movie/${id}`}>
           <img
             className="card__img"
             src={poster}
@@ -18,8 +18,8 @@ const MovieSceneItem = (props) => {
             <span className="card__title">{` - ${year}`}</span>
           </p>
           <p className="card__text">{full_line}</p>
-        </li>
-      </Link>
+        </Link>
+      </li>
     </>
   );
 };

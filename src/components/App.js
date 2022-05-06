@@ -14,6 +14,7 @@ import Header from "./Header";
 import Filters from "./Filters";
 import MovieSceneList from "./MovieSceneList";
 import MovieSceneDetail from "./MovieSceneDetail";
+import NotFound from "./NotFound";
 
 function App() {
   //States
@@ -78,6 +79,7 @@ function App() {
       <main>
         <Routes>
           <Route
+            exact
             path="/"
             element={
               <>
@@ -100,6 +102,7 @@ function App() {
             path="/movie/:movieId"
             element={<MovieSceneDetail movieDetail={movieFound} />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </div>
