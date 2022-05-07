@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+// Fonts
+$font-header: 'Mansalva', cursive;
+$font-main: 'Roboto', sans-serif;
+
+
+
+
+//Color
+
+
+$c-light1:#CFDBD5;
+$c-light2:#E8EDDF;
+$c-medium:#F5CB5C;
+$c-dark1:#242423;
+$c-dark2:#333533;
+
+
+//Type scale
+$headline: 3.5rem;//32px
+$subheadline: 2rem;
+$size1: 1.125rem;//18px
+$size2: 1rem;//16px
+$size3: 0.875rem; //14px
+$size4: 0.75rem; //12px
+$size5: 0.625rem; //10px
+$size6: 0.5rem; //8px
+
+//Mixins responsive
+
+@mixin tablet {
+    @media all and (min-width: 768px) {
+      @content;
+    }
+  }
+  
+@mixin desktop {
+    @media all and (min-width: 1200px) {
+      @content;
+    }
+  }
+  

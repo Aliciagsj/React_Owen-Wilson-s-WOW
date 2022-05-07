@@ -1,4 +1,4 @@
-import "../styles/MovieSceneItem.scss";
+import "../styles/components/MovieSceneItem.scss";
 import { Link } from "react-router-dom";
 
 const MovieSceneItem = (props) => {
@@ -17,7 +17,7 @@ const MovieSceneItem = (props) => {
             {movie}
             <span className="card__title">{` - ${year}`}</span>
           </p>
-          <p className="card__text">{full_line}</p>
+          <p className="card__text">"{full_line}"</p>
         </Link>
       </li>
     </>

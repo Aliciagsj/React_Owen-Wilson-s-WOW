@@ -1,10 +1,9 @@
-import "../styles/Header.scss";
+import "../styles/components/Header.scss";
 
 const Header = () => {
   return (
     <header className="header">
-      <img className="header__img" alt="" src="" />
-      <h1 className="header__title">Owen Wilson`s "wow"</h1>
+      <h1 className="header__title">Owen Wilson`s "WOW"</h1>
     </header>
   );
 };

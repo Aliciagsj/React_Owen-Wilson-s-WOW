@@ -1,0 +1,30 @@
+.page {
+    background-color: $c-dark1;
+    
+    min-height: 100vh;
+    width: 100%;
+          
+  }
+
+
+.main {
+  padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-height: calc(100vh - 200px);
+      background-color:$c-light1;
+      // @media all and (min-width: 768px) {
+      //   padding: 60px;
+      //   min-height: calc(100vh - 579px);
+      // }
+      // @media all and (min-width: 1200px) {
+      //   min-height: calc(100vh - 621px);
+      // }
+}
+
+
+
+
+

@@ -1,3 +1,5 @@
+import "../styles/components/FilterYear.scss";
+
 const FilterYear = (props) => {
   const handleChange = (ev) => {
     props.handleFilterYear(ev.target.value);
@@ -14,15 +16,21 @@ const FilterYear = (props) => {
   };
 
   return (
-    <>
-      <label className="form__label" htmlFor="year">
-        Year
+    <div className="filters__fieldset">
+      <label className="filters__fieldset--label" htmlFor="year">
+        Filtrar por año:
       </label>
-      <select name="year" id="year" value={props.year} onChange={handleChange}>
+      <select
+        className="filters__fieldset--select"
+        name="year"
+        id="year"
+        value={props.year}
+        onChange={handleChange}
+      >
         <option value="">Todos</option>
         {renderYears()}
       </select>
-    </>
+    </div>
   );
 };
 

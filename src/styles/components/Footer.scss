@@ -1,0 +1,33 @@
+@import "../core/variables.scss";
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+);
+
+.footer {
+    background-color: $c-dark1;
+    height: 80px;
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__copy {
+      font-size: 14px;
+      color: $c-light1;
+    }
+    &__rrss {
+       
+      
+      &--link {
+        color: $c-light1;
+     
+        
+      }
+
+      &--icons {
+        font-size: 20px;
+        margin-right: 15px;
+        &:hover {
+          color: $c-medium;
+        }
+      }
+    }
+  }

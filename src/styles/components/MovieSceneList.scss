@@ -1,0 +1,30 @@
+@import "../core/variables.scss";
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.error {
+    &__text {
+        color: $c-dark2;
+        font-size: $size1;
+        font-weight:bold;
+        text-align: center;
+    
+    }
+
+    &__img {
+      width: 300px;
+      margin: 20px;
+     
+    
+    }
+
+
+}
+

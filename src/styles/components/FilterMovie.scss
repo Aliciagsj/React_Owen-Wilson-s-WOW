@@ -1,0 +1,43 @@
+@import "../core/variables.scss";
+
+
+.filters {
+  
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+   
+    @media all and (min-width: 768px) {
+      margin-right: 15px;
+     }
+
+
+    &--label {
+      font-size: $size1;
+      font-weight: bold;
+      color: $c-dark2;
+      margin-bottom: 5px;
+      
+    }
+    &--input {
+      height: 40px;
+      width: 300px;
+      padding-left: 10px;
+      font-size: $size2;
+      color: $c-light1;
+      font-weight: lighter;
+      border: 3px solid $c-dark1;
+      border-radius: 5px;
+      background-color: $c-dark2;
+      
+    }
+
+   
+
+
+
+  }
+  
+}

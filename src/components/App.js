@@ -15,6 +15,7 @@ import Filters from "./Filters";
 import MovieSceneList from "./MovieSceneList";
 import MovieSceneDetail from "./MovieSceneDetail";
 import NotFound from "./NotFound";
+import Footer from "./Footer";
 
 function App() {
   //States
@@ -76,7 +77,7 @@ function App() {
   return (
     <div className="page">
       <Header />
-      <main>
+      <main className="main">
         <Routes>
           <Route
             exact
@@ -105,6 +106,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

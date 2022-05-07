@@ -1,0 +1,21 @@
+@import "../core/variables.scss";
+
+.btn {
+    width: 150px;
+    height: 40px;
+    color: $c-light1;
+
+    background-color: $c-dark2;
+    border-radius: 10px;
+    gap: 10px;
+    margin: 10px 0px;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    transition: background-color ease 0.5s, color ease 0.5s;
+    &:hover {
+      background-color: $c-medium;
+      color: $c-dark2;
+    }
+  }

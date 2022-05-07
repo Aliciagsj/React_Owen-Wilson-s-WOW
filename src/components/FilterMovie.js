@@ -1,22 +1,24 @@
+import "../styles/components/FilterMovie.scss";
+
 const FilterMovie = (props) => {
   const handleChange = (ev) => {
     props.handleFilterMovie(ev.target.value);
   };
 
   return (
-    <>
-      <label className="form__label" htmlFor="movie">
-        Movie
+    <div className="filters__fieldset">
+      <label className="filters__fieldset--label" htmlFor="movie">
+        Filtrar por nombre:
       </label>
       <input
-        className="form__input"
+        className="filters__fieldset--input"
         type="text"
         name="movie"
         id="movie"
         value={props.filterMovies}
         onChange={handleChange}
       />
-    </>
+    </div>
   );
 };
 

@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-.page {
-  padding: 1rem;
-}
-
+@import './core/reset.scss';
+@import './core/variables.scss';
+@import './layout/page.scss';
+// @import './components/header.scss';
+// // @import "./components/Btn.scss";
+// // @import "./components/FilterMovie.scss";
+// // @import "./components/Filters.scss";
+// // @import "./components/FilterYear.scss";
+// // @import "./components/Footer.scss";
+// // @import "./components/Header.scss";
+// // @import "./components/MovieSceneDetail.scss";
+// // @import "./components/MovieSceneItem.scss";
+// // @import "./components/MovieSceneList.scss";
+// // @import "./components/NotFound.scss";

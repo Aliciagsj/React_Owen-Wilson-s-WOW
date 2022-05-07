@@ -1,4 +1,4 @@
-import "../styles/MovieSceneList.scss";
+import "../styles/components/MovieSceneList.scss";
 import MovieSceneItem from "./MovieSceneItem";
 import gif from "../images/tenor.gif";
 
@@ -13,12 +13,16 @@ const MovieSceneList = (props) => {
   });
 
   return renderList.length === 0 ? (
-    <div>
-      <p>WOW!!!! no encuentro la pelicula: {filterMovies}.</p>
-      <img src={gif} alt="" />
-    </div>
+    <section className="error">
+      <img className="error__img" src={gif} alt="" />
+      <p className="error__text">
+        WOW!!!! no encuentro la pelicula: {filterMovies}.
+      </p>
+    </section>
   ) : (
-    <ul className="list">{renderList}</ul>
+    <section className="list">
+      <ul className="list">{renderList}</ul>
+    </section>
   );
 };
 
