@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.f448bb0b.css",
+    "main.js": "./static/js/main.f0f139b3.js",
+    "static/media/tenor.gif": "./static/media/tenor.3521b38739f64b199031.gif",
+    "static/media/Error404.jpg": "./static/media/Error404.4d572890eb99c8ef0c22.jpg",
+    "index.html": "./index.html",
+    "main.f448bb0b.css.map": "./static/css/main.f448bb0b.css.map",
+    "main.f0f139b3.js.map": "./static/js/main.f0f139b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f448bb0b.css",
+    "static/js/main.f0f139b3.js"
+  ]
+}
