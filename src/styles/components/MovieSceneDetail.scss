@@ -7,22 +7,15 @@
 
   display: flex;
   flex-direction: column;
-
-
-
   &__header {
     display: flex;
     justify-content: flex-end;
-
   }
-
   &__error {
     color: $c-dark2;
     font-size: $size1;
     font-weight:bold;
     text-align: center;
-
-
   }
 
   &__card {
@@ -35,29 +28,20 @@
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
-
     @media all and (min-width: 768px) {
       flex-direction: row;
       width: 600px;
-     }
-  
-
-    
+     }   
     
       &--img {
-        width: 200px;
-        //height: 300px;
-        
+        width: 200px;        
       }
 
       &--list {
-
         display: flex;
         flex-direction: column;
         align-items: center;
         max-width: 250px;
-
-
       }
       &--title {
         color: $c-light1;
@@ -65,55 +49,41 @@
         font-weight:bold;
         margin-top: 5px;
         text-align: center;
-
       }
 
       &--text {
-        color: $c-light1;
-        
+        color: $c-light1;        
         font-size: $size2;
-        margin-top: 5px;
-        
+        margin-top: 5px;        
         text-align: center;
 
       }
       &--wow {
         color: $c-medium;
         font-family: $font-header;
-        font-size: $size2;
-      
+        font-size: $size2;      
         text-align: center;
-
       }
 
 
       &--link {
-        // color: $c-dark2;
         font-weight: lighter;
         margin-top: 5px;
         background-color: $c-light1;
         padding: 5px;
         border-radius: 5px;
-
       }
 
       &--icons {
         font-size: $size2;
         color: $c-dark2;
         padding: 5px;
-
         &:hover {
           color: $c-dark2;
           font-weight: bold;
-
         }
       }
-
-
-
-  }
-    
-     
+  }        
 }
   
 .play{

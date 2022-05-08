@@ -1,6 +1,7 @@
 //Styles
 import "../styles/App.scss";
 
+//Component React
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { matchPath, useLocation } from "react-router";
@@ -19,15 +20,11 @@ import Footer from "./Footer";
 
 function App() {
   //States
-
   const [movies, setMovies] = useState(localStorage.get("movies", []));
-
   const [filterMovies, setFilterMovies] = useState("");
-
   const [filterYear, setFilterYear] = useState("");
 
   //Effect
-
   useEffect(() => {
     if (movies.length === 0) {
       getMovies().then((data) => {
@@ -38,8 +35,6 @@ function App() {
       });
     }
   });
-
-  //Filtro Movie
 
   const handleFilterMovie = (value) => {
     setFilterMovies(value);
@@ -70,7 +65,6 @@ function App() {
 
   const { pathname } = useLocation();
   const dataPath = matchPath("/movie/:movieId", pathname);
-
   const movieId = dataPath !== null ? dataPath.params.movieId : null;
   const movieFound = movies.find((item) => item.id === parseInt(movieId));
 

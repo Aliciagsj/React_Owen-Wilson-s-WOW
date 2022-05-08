@@ -74,6 +74,6 @@ El ejercicio consiste en desarrollar una página web con el listado de las escen
 ## Authors
 
 - [@Aliciagsj](https://www.github.com/Aliciagsj)
-  Sígueme en:
+- Sígueme en:
   [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alicia-gonz%C3%A1lez-san-juan/)
   [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/aliciagonsj)

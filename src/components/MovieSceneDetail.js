@@ -41,7 +41,7 @@ const MovieSceneDetail = (props) => {
               target="blank"
               className="movie-detail__card--icons"
             >
-              <i class="fas fa-play-circle play"></i>
+              <i className="fas fa-play-circle play"></i>
               Escuchar audio
             </a>
           </li>
